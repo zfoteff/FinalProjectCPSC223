@@ -1,3 +1,10 @@
+ /*  
+ * Class: CPSC 223-01
+ * Zac Foteff, Weston Averill, Zach Ambroseo  
+ * File Name: project.cpp      
+	Main method for running sorting algorithm tests of a specified dataset
+*/ 
+
 #include <iostream>
 #include "cocktailSort.h"
 #include "cocktailSort.cpp"

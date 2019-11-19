@@ -1,3 +1,12 @@
+ /*  
+ * Class: CPSC 223-01
+ * Zac Foteff, Weston Averill, Zach Ambroseo  
+ * File Name: sorting_algorithm.cpp      
+	Definition of abstract SortingAlgorithm class that allows 
+	us to define multiple sorting algorithms and run them using the same
+	test bench files
+*/ 
+
 #ifndef SORTING_ALGORITHM
 #define SORTING_ALGORITHM
 

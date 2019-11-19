@@ -1,3 +1,10 @@
+ /*  
+ * Class: CPSC 223-01
+ * Zac Foteff, Weston Averill, Zach Ambroseo  
+ * File Name: cocktail_sort.cpp      
+	Implementation of CocktailSort class object
+*/ 
+
 #include <iostream>
 #include <vector>
 #include "cocktailSort.h"
@@ -37,7 +44,6 @@ void CocktailSort::print()
   cout << endl;
 }
 
-
 void CocktailSort::sort(std::vector<int>& numbers_list)
 {
   cocktailSort(arr, len);
@@ -51,6 +57,12 @@ void CocktailSort::cocktailSort(int arr[], int len)
   int last = len-1;
   bool keepGoing = true;
 
+  
+  
+  
+  
+  
+  
   while (keepGoing)
   {
     keepGoing = false;

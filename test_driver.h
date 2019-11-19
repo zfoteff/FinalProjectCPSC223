@@ -1,3 +1,11 @@
+ /*  
+ * Class: CPSC 223-01
+ * Zac Foteff, Weston Averill, Zach Ambroseo  
+ * File Name: test_driver.h      
+	Test driver for running, and reporting results of insertion calls and
+	sorting algorithm completion time
+*/ 
+
 #ifndef __TEST_DRIVER_H
 #define __TEST_DRIVER_H
 
@@ -47,17 +55,14 @@ void TestDriver::run_tests()
   {
     int number;
     in_file >> number;
-
     algorithm->insert(number);
     total_ins++;
   }
 
   srt_times += timed_sort(in_file);
   total_srt += 1;
-
   in_file.close();
 }
-
 void TestDriver::print_details(std::string test, int total, int times) const
 {
   using namespace std;
