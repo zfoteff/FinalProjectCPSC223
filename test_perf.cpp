@@ -24,8 +24,10 @@ int main(int argc, char** argv)
   }
 
   int new_length = atoi(argv[2]);
-  CocktailSort* c = new CocktailSort(new_length);
+  GnomeSort* c = new GnomeSort(new_length);
   TestDriver driver(argv[1], c);
+  cout<<"Here1"<<endl;
   driver.run_tests();
+  cout<<"Here2"<<endl;
   driver.print_results();
 }
