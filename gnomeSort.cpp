@@ -1,5 +1,14 @@
+/*
+* Class: CPSC 223-01
+* Zac Foteff, Weston Averill, Zach Ambroseo
+* File Name: gnome_sort.cpp
+ Implementation of GnomeSort class object
+*/
+
 #include <iostream>
-#include "GnomeSort.h"
+#include <vector>
+#include "gnomeSort.h"
+#include "sorting_algorithm.h"
 using namespace std;
 
 GnomeSort::GnomeSort()
@@ -8,81 +17,85 @@ GnomeSort::GnomeSort()
  array = new int[len];
 }
 
+
 GnomeSort::GnomeSort(const int& ArraySize)
 {
  len = ArraySize;
  array = new int[len];
- for(int i=0; i<len; i++)
-  array[i]=0;
 }
 
-void GnomeSort::insert(const int& Num)
-{
- if(Num==0 || Num<0)
-  cout << "Invalid Insert" << endl;
- else
- {
-  for( int i=0; i<len; i++)//For inserts without full
-   if(array[i]==0)
-   {
-    array[i]=Num;
-    return;
-   }
- }
-}
 
-void GnomeSort::sort()
+void GnomeSort::insert(const int& number)
 {
- if(len<1)
-  cout << "Already Sorted, ArraySize too small" << endl;
- else
- {
-  int j=0;
-  int i=1;
-  while(i<len)
+  for (int i = 0; i < len; ++i)
   {
-   j=i;
-   cout << endl;
-   cout << array[j] << " " << array[j-1] << endl;
-   if(array[j-1]> array[j])
-   {
-    swap(&array[j-1], &array[j]);
-    j--;
-    while(j>0)
-     if(array[j-1]> array[j])
-     {
-      cout << array[j] << " " << array[j-1] << endl;
-      swap(&array[j-1], &array[j]);
-      j--;
-      cout << j << endl;
-     }
-     else
-     {
-      j=0;
-     }
-   }
-   i++;
+    if (array[i] == 0)
+    {
+      array[i] = number;
+      len++;
+      return;
+    }
   }
- }
 }
+
 
 void GnomeSort::print()
 {
- for(int i=0; i<len; i++)
-  cout << array[i] << " ";
- cout << endl;
+  for (int i = 0; i < len; i++)
+    cout << array[i] << " ";
+
+  cout << endl;
+  cout << endl;
 }
+
+
+void GnomeSort::sort(vector<int>& numlist)
+{
+  gnomeSort();
+  for (int i = 0; i < len; i++)
+    numlist.push_back(array[i]);
+}
+
+
+void GnomeSort::gnomeSort()
+{
+  if(len <= 1)
+    return;
+
+  else
+  {
+    int j=0;
+    int i=1;
+
+    while(i<len)
+    {
+      j = i;
+      if(array[j-1]> array[j])
+      {
+        swap(&array[j-1], &array[j]);
+        j--;
+        while(j>0)
+        {
+          if(array[j-1]> array[j])
+          {
+            swap(&array[j-1], &array[j]);
+            j--;
+          }
+
+          else
+          j = 0;
+        }
+      }
+
+      i++;
+    }
+  }
+}
+
 
 void GnomeSort::swap(int *high, int *low)
-{ 
- cout << "swap" << endl;
+{
  int temp = *high;
  *high = *low;
- *low=temp;
+ *low = temp;
 }
-
-
-
-
-
-

@@ -1,27 +1,28 @@
 #ifndef GNOMESORT_H
 #define GNOMESORT_H
-using namespace std;
 
 #include <iostream>
+#include "sorting_algorithm.h"
 
-class GnomeSort
+class GnomeSort : public SortingAlgorithm
 {
- public:
+public:
   GnomeSort();
 
   GnomeSort(const int& ArraySize);
 
   void insert(const int& Num);
 
-  void sort();
+  void sort(std::vector<int>& num_list);
 
   void print();
 
- private:
-   int len;
-   int* array;
-   void swap(int* high, int* low);
+private:
+  int len;
+  int* array;
+
+  void gnomeSort();
+  void swap(int* high, int* low);
 };
 
 #endif
-   

@@ -1,9 +1,9 @@
- /*  
+ /*
  * Class: CPSC 223-01
- * Zac Foteff, Weston Averill, Zach Ambroseo  
- * File Name: cocktail_sort.h      
+ * Zac Foteff, Weston Averill, Zach Ambroseo
+ * File Name: cocktail_sort.h
 	Definition of CocktailSort class object
-*/ 
+*/
 
 #ifndef COCKTAIL_SORT_H
 #define COCKTAIL_SORT_H
@@ -22,7 +22,7 @@ class CocktailSort : public SortingAlgorithm
 
    void sort(std::vector<int>& numbers_list);
 
-  void print();
+   void print();
 
  private:
    int len;

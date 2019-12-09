@@ -6,6 +6,5 @@ set(CMAKE_CXX_STANDARD 11)
 find_package(GTest REQUIRED)
 include_directories(${GTEST_INCLUDE_DIRS})
 
-
 #create performance add_executable
 add_executable(testperf test_perf.cpp)

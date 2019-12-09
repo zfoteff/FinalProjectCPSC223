@@ -1,9 +1,9 @@
- /*  
+ /*
  * Class: CPSC 223-01
- * Zac Foteff, Weston Averill, Zach Ambroseo  
- * File Name: cocktail_sort.cpp      
+ * Zac Foteff, Weston Averill, Zach Ambroseo
+ * File Name: cocktail_sort.cpp
 	Implementation of CocktailSort class object
-*/ 
+*/
 
 #include <iostream>
 #include <vector>
@@ -17,11 +17,13 @@ CocktailSort::CocktailSort()
   arr = new int[len];
 }
 
+
 CocktailSort::CocktailSort(const int& length)
 {
   len = length;
   arr = new int[len];
 }
+
 
 void CocktailSort::insert(const int& number)
 {
@@ -30,10 +32,12 @@ void CocktailSort::insert(const int& number)
     if (arr[i] == 0)
     {
       arr[i] = number;
+      len++;
       return;
     }
   }
 }
+
 
 void CocktailSort::print()
 {
@@ -57,12 +61,6 @@ void CocktailSort::cocktailSort(int arr[], int len)
   int last = len-1;
   bool keepGoing = true;
 
-  
-  
-  
-  
-  
-  
   while (keepGoing)
   {
     keepGoing = false;
