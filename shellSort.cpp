@@ -68,7 +68,7 @@ void ShellSort::shellSort(int arr[], int len)
 {
   for (int gap = len/2; gap > 0; gap /= 2)
   {
-    for (int i = gap; i < len; i+=1)
+    for (int i = gap; i < len; ++i)
     {
       int temp = arr[i];
       int j;

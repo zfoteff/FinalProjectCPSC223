@@ -36,7 +36,7 @@ GnomeShell::GnomeShell(const GnomeShell& rhs)
   this->size = 0;
 }
 
-GnomeShell::~GnomeShell(const GnomeShell& rhs)
+GnomeShell::~GnomeShell()
 {
   len = 0;
   size = 0;
@@ -49,7 +49,7 @@ void GnomeShell::insert(const int& number)
   size++;
 }
 
-void GnomeShell::sort(std::vector<int> numlist)
+void GnomeShell::sort(std::vector<int>& numlist)
 {
   gnomeShellSort();
   for (int i = 0; i < len; ++i)
@@ -67,10 +67,41 @@ void GnomeShell::print()
 
 void GnomeShell::gnomeShellSort()
 {
+  for (int gap = len/2; gap > 0; gap /= 2)
+  {
+    for (int i = gap; i < len; ++i)
+    {
+      int temp = arr[i];
+      int j = i;
+      int iterStart;
+      int iter;
 
+      if (j >= gap && arr[j - gap] > temp)
+      {
+        arr[j] = arr[j-gap];
+        j -= gap;
+        continue;
+      }
+
+      iterStart = (j-gap);
+      iter = (j-gap)+1;
+      while (iter < i)
+      {
+        if (iter == iterStart || arr[iter] >= arr[iter-1])
+          iter += 1;
+
+        else
+        {
+          swap(&arr[iter], &arr[iter-1]);
+          iter -= 1;
+        }
+      }
+    }
+  }
 }
 
-void CocktailSort::swap(int *numHigh, int *numLow)
+
+void GnomeShell::swap(int *numHigh, int *numLow)
 {
   int tmp = *numHigh;
   *numHigh = *numLow;

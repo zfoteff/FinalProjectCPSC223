@@ -9,9 +9,9 @@
 #define GNOMESHELL_H
 
 #include <iostream>
-#include <sorting_algorithm.h>
+#include "sorting_algorithm.h"
 
-class ShellSort : public SortingAlgorithm
+class GnomeShell : public SortingAlgorithm
 {
 public:
   GnomeShell();

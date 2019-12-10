@@ -22,6 +22,22 @@ iostream
 sorting_algorithm.h
 /home/student/Documents/FinalProjectCPSC223/sorting_algorithm.h
 
+/home/student/Documents/FinalProjectCPSC223/gnomeShell.cpp
+iostream
+-
+vector
+-
+sorting_algorithm.h
+/home/student/Documents/FinalProjectCPSC223/sorting_algorithm.h
+gnomeShell.h
+/home/student/Documents/FinalProjectCPSC223/gnomeShell.h
+
+/home/student/Documents/FinalProjectCPSC223/gnomeShell.h
+iostream
+-
+sorting_algorithm.h
+/home/student/Documents/FinalProjectCPSC223/sorting_algorithm.h
+
 /home/student/Documents/FinalProjectCPSC223/gnomeSort.cpp
 iostream
 -
@@ -87,6 +103,10 @@ cocktailSort.cpp
 /home/student/Documents/FinalProjectCPSC223/cocktailSort.cpp
 sorting_algorithm.h
 /home/student/Documents/FinalProjectCPSC223/sorting_algorithm.h
+gnomeShell.h
+/home/student/Documents/FinalProjectCPSC223/gnomeShell.h
+gnomeShell.cpp
+/home/student/Documents/FinalProjectCPSC223/gnomeShell.cpp
 test_driver.h
 /home/student/Documents/FinalProjectCPSC223/test_driver.h
 

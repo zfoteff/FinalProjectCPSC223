@@ -3,6 +3,8 @@
 
 CMakeFiles/testperf.dir/test_perf.cpp.o: cocktailSort.cpp
 CMakeFiles/testperf.dir/test_perf.cpp.o: cocktailSort.h
+CMakeFiles/testperf.dir/test_perf.cpp.o: gnomeShell.cpp
+CMakeFiles/testperf.dir/test_perf.cpp.o: gnomeShell.h
 CMakeFiles/testperf.dir/test_perf.cpp.o: gnomeSort.cpp
 CMakeFiles/testperf.dir/test_perf.cpp.o: gnomeSort.h
 CMakeFiles/testperf.dir/test_perf.cpp.o: shellSort.cpp

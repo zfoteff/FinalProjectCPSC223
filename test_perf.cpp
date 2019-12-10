@@ -13,6 +13,8 @@
 #include "cocktailSort.h"
 #include "cocktailSort.cpp"
 #include "sorting_algorithm.h"
+#include "gnomeShell.h"
+#include "gnomeShell.cpp"
 #include "test_driver.h"
 
 using namespace std;
