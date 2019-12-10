@@ -7,45 +7,49 @@
 
 #include <iostream>
 #include <vector>
-#include "gnomeSort.h"
 #include "sorting_algorithm.h"
+#include "gnomeSort.h"
 using namespace std;
 
 GnomeSort::GnomeSort()
 {
  len = 0;
- array = new int[len];
+ size = 0;
+ arr = new int[len];
 }
 
 
-GnomeSort::GnomeSort(const int& ArraySize)
+GnomeSort::GnomeSort(const int& length)
 {
- len = ArraySize;
- array = new int[len];
+ len = length;
+ size = 0;
+ arr = new int[len];
+}
+
+
+GnomeSort::GnomeSort(const GnomeSort& rhs)
+: len(rhs.len)
+{
+  this->arr = new int[rhs.len];
+  for (int i = 0; i < rhs.len; ++i)
+    this->arr[i] = rhs.arr[i];
+
+  this->size = 0;
+}
+
+
+GnomeSort::~GnomeSort()
+{
+  len = 0;
+  size = 0;
+  delete [] arr;
 }
 
 
 void GnomeSort::insert(const int& number)
 {
-  for (int i = 0; i < len; ++i)
-  {
-    if (array[i] == 0)
-    {
-      array[i] = number;
-      len++;
-      return;
-    }
-  }
-}
-
-
-void GnomeSort::print()
-{
-  for (int i = 0; i < len; i++)
-    cout << array[i] << " ";
-
-  cout << endl;
-  cout << endl;
+  arr[size] = number;
+  size++;
 }
 
 
@@ -53,7 +57,17 @@ void GnomeSort::sort(vector<int>& numlist)
 {
   gnomeSort();
   for (int i = 0; i < len; i++)
-    numlist.push_back(array[i]);
+    numlist.push_back(arr[i]);
+}
+
+
+void GnomeSort::print()
+{
+  for (int i = 0; i < len; i++)
+    cout << arr[i] << " ";
+
+  cout << endl;
+  cout << endl;
 }
 
 
@@ -64,21 +78,21 @@ void GnomeSort::gnomeSort()
 
   else
   {
-    int j=0;
-    int i=1;
+    int j = 0;
+    int i = 1;
 
     while(i<len)
     {
       j = i;
-      if(array[j-1]> array[j])
+      if(arr[j-1]> arr[j])
       {
-        swap(&array[j-1], &array[j]);
+        swap(&arr[j-1], &arr[j]);
         j--;
         while(j>0)
         {
-          if(array[j-1]> array[j])
+          if(arr[j-1]> arr[j])
           {
-            swap(&array[j-1], &array[j]);
+            swap(&arr[j-1], &arr[j]);
             j--;
           }
 

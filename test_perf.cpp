@@ -8,6 +8,8 @@
 #include <iostream>
 #include "gnomeSort.h"
 #include "gnomeSort.cpp"
+#include "shellSort.h"
+#include "shellSort.cpp"
 #include "cocktailSort.h"
 #include "cocktailSort.cpp"
 #include "sorting_algorithm.h"
@@ -24,7 +26,7 @@ int main(int argc, char** argv)
   }
 
   int new_length = atoi(argv[2]);
-  CocktailSort* c = new CocktailSort(new_length);
+  ShellSort* c = new ShellSort(new_length);
   TestDriver driver(argv[1], c);
   driver.run_tests();
   driver.print_results();

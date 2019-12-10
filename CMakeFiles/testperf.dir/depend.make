@@ -5,6 +5,8 @@ CMakeFiles/testperf.dir/test_perf.cpp.o: cocktailSort.cpp
 CMakeFiles/testperf.dir/test_perf.cpp.o: cocktailSort.h
 CMakeFiles/testperf.dir/test_perf.cpp.o: gnomeSort.cpp
 CMakeFiles/testperf.dir/test_perf.cpp.o: gnomeSort.h
+CMakeFiles/testperf.dir/test_perf.cpp.o: shellSort.cpp
+CMakeFiles/testperf.dir/test_perf.cpp.o: shellSort.h
 CMakeFiles/testperf.dir/test_perf.cpp.o: sorting_algorithm.h
 CMakeFiles/testperf.dir/test_perf.cpp.o: test_driver.h
 CMakeFiles/testperf.dir/test_perf.cpp.o: test_perf.cpp

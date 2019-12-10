@@ -11,10 +11,10 @@ iostream
 -
 vector
 -
-cocktailSort.h
-/home/student/Documents/FinalProjectCPSC223/cocktailSort.h
 sorting_algorithm.h
 /home/student/Documents/FinalProjectCPSC223/sorting_algorithm.h
+cocktailSort.h
+/home/student/Documents/FinalProjectCPSC223/cocktailSort.h
 
 /home/student/Documents/FinalProjectCPSC223/cocktailSort.h
 iostream
@@ -27,12 +27,28 @@ iostream
 -
 vector
 -
+sorting_algorithm.h
+/home/student/Documents/FinalProjectCPSC223/sorting_algorithm.h
 gnomeSort.h
 /home/student/Documents/FinalProjectCPSC223/gnomeSort.h
+
+/home/student/Documents/FinalProjectCPSC223/gnomeSort.h
+iostream
+-
 sorting_algorithm.h
 /home/student/Documents/FinalProjectCPSC223/sorting_algorithm.h
 
-/home/student/Documents/FinalProjectCPSC223/gnomeSort.h
+/home/student/Documents/FinalProjectCPSC223/shellSort.cpp
+iostream
+-
+vector
+-
+sorting_algorithm.h
+/home/student/Documents/FinalProjectCPSC223/sorting_algorithm.h
+shellSort.h
+/home/student/Documents/FinalProjectCPSC223/shellSort.h
+
+/home/student/Documents/FinalProjectCPSC223/shellSort.h
 iostream
 -
 sorting_algorithm.h
@@ -61,6 +77,10 @@ gnomeSort.h
 /home/student/Documents/FinalProjectCPSC223/gnomeSort.h
 gnomeSort.cpp
 /home/student/Documents/FinalProjectCPSC223/gnomeSort.cpp
+shellSort.h
+/home/student/Documents/FinalProjectCPSC223/shellSort.h
+shellSort.cpp
+/home/student/Documents/FinalProjectCPSC223/shellSort.cpp
 cocktailSort.h
 /home/student/Documents/FinalProjectCPSC223/cocktailSort.h
 cocktailSort.cpp

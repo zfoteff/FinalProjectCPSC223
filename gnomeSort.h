@@ -1,3 +1,10 @@
+/*
+* Class: CPSC 223-01
+* Zac Foteff, Weston Averill, Zach Ambroseo
+* File Name: gnomeSort.h
+ Definition of GnomeSort class object
+*/
+
 #ifndef GNOMESORT_H
 #define GNOMESORT_H
 
@@ -9,9 +16,13 @@ class GnomeSort : public SortingAlgorithm
 public:
   GnomeSort();
 
-  GnomeSort(const int& ArraySize);
+  GnomeSort(const int& length);
 
-  void insert(const int& Num);
+  GnomeSort(const GnomeSort& rhs);
+
+  ~GnomeSort();
+
+  void insert(const int& number);
 
   void sort(std::vector<int>& num_list);
 
@@ -19,7 +30,8 @@ public:
 
 private:
   int len;
-  int* array;
+  int size;
+  int* arr;
 
   void gnomeSort();
   void swap(int* high, int* low);

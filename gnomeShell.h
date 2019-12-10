@@ -1,26 +1,26 @@
 /*
 * Class: CPSC 223-01
 * Zac Foteff, Weston Averill, Zach Ambroseo
-* File Name: shellSort.h
- Definition of ShellSort class object
+* File Name: gnomeShell.h
+ Definition of hybrid sorting algorithm GnomeShell
 */
 
-#ifndef SHELLSORT_H
-#define SHELLSORT_H
+#ifndef GNOMESHELL_H
+#define GNOMESHELL_H
 
 #include <iostream>
-#include "sorting_algorithm.h"
+#include <sorting_algorithm.h>
 
 class ShellSort : public SortingAlgorithm
 {
 public:
-  ShellSort();
+  GnomeShell();
 
-  ShellSort(const int& length);
+  GnomeShell(const int& length);
 
-  ShellSort(const ShellSort& rhs);
+  GnomeShell(const GnomeShell& rhs);
 
-  ~ShellSort();
+  ~GnomeShell();
 
   void insert(const int& number);
 
@@ -33,7 +33,7 @@ private:
   int size;
   int* arr;
 
-  void shellSort(int arr[], int len);
+  void gnomeShellSort();
   void swap (int* numHigh, int* numLow);
 };
 

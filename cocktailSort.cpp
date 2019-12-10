@@ -7,39 +7,44 @@
 
 #include <iostream>
 #include <vector>
-#include "cocktailSort.h"
 #include "sorting_algorithm.h"
+#include "cocktailSort.h"
 using namespace std;
 
 CocktailSort::CocktailSort()
 {
-  cout<<"DVC called"<<endl;
-  size = 0;
   len = 0;
+  size = 0;
   arr = new int[len];
 }
 
+
 CocktailSort::CocktailSort(const int& length)
 {
-  cout<<"EVC called"<<endl;
   len = length;
   size = 0;
   arr = new int[len];
 }
 
+
 CocktailSort::CocktailSort(const CocktailSort& rhs)
-: len(rhs.len), size(rhs.size)
+: len(rhs.len)
 {
   this->arr = new int[rhs.len];
   for (int i = 0; i < rhs.len; ++i)
     this->arr[i] = rhs.arr[i];
+
+  this->size = 0;
 }
+
 
 CocktailSort::~CocktailSort()
 {
   len = 0;
+  size = 0;
   delete [] arr;
 }
+
 
 void CocktailSort::insert(const int& number)
 {
@@ -48,21 +53,23 @@ void CocktailSort::insert(const int& number)
 }
 
 
-void CocktailSort::print()
-{
-  for (int i = 0; i < len; i++)
-    cout << arr[i] << " ";
-
-  cout << endl;
-  cout << endl;
-}
-
 void CocktailSort::sort(std::vector<int>& numbers_list)
 {
   cocktailSort(arr, len);
   for (int i = 0; i < len; ++i)
     numbers_list.push_back(arr[i]);
 }
+
+
+void CocktailSort::print()
+{
+  for (int i = 0; i < len; ++i)
+    cout << arr[i] << " ";
+
+  cout << endl;
+  cout << endl;
+}
+
 
 void CocktailSort::cocktailSort(int arr[], int len)
 {
@@ -94,6 +101,7 @@ void CocktailSort::cocktailSort(int arr[], int len)
     startPoint++;
   }
 }
+
 
 void CocktailSort::swap(int *numHigh, int *numLow)
 {
