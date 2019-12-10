@@ -13,29 +13,38 @@ using namespace std;
 
 CocktailSort::CocktailSort()
 {
+  cout<<"DVC called"<<endl;
+  size = 0;
   len = 0;
   arr = new int[len];
 }
 
-
 CocktailSort::CocktailSort(const int& length)
 {
+  cout<<"EVC called"<<endl;
   len = length;
+  size = 0;
   arr = new int[len];
 }
 
+CocktailSort::CocktailSort(const CocktailSort& rhs)
+: len(rhs.len), size(rhs.size)
+{
+  this->arr = new int[rhs.len];
+  for (int i = 0; i < rhs.len; ++i)
+    this->arr[i] = rhs.arr[i];
+}
+
+CocktailSort::~CocktailSort()
+{
+  len = 0;
+  delete [] arr;
+}
 
 void CocktailSort::insert(const int& number)
 {
-  for (int i = 0; i < len; ++i)
-  {
-    if (arr[i] == 0)
-    {
-      arr[i] = number;
-      len++;
-      return;
-    }
-  }
+  arr[size] = number;
+  size++;
 }
 
 

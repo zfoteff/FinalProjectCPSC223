@@ -60,20 +60,21 @@ void TestDriver::run_tests()
     total_ins++;
   }
 
-  cout<<"Pre-Sort"<<endl;
   srt_times += timed_sort(in_file);
-  cout<<"Post sort"<<endl;
   total_srt += 1;
-  cout<<"Here2"<<endl;
+  in_file.close();
 }
+
 void TestDriver::print_details(std::string test, int total, int times) const
 {
   using namespace std;
-
+  if (total <= 0)
+    return;
   cout<<" " << test << " Calls: " << total << endl;
-  cout<<" " << test << " Time: " << times << "microseconds" << endl;
-  cout<<" " << test << " Average: " << ((1.0 * times) / total) << "microseconds"
-      << endl << endl;
+  cout<<" " << test << " Time: " << times
+            << "microseconds" << endl;
+  cout<<" " << test << " Average: " << ((1.0 * times) / total)
+            << "microseconds" << endl << endl;
 }
 
 void TestDriver::print_results() const
