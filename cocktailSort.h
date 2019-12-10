@@ -18,6 +18,12 @@ class CocktailSort : public SortingAlgorithm
 
    CocktailSort(const int& length);
 
+   CocktailSort(const CocktailSort& rhs);
+
+   ~CocktailSort();
+
+   CocktailSort& operator=(const CocktailSort& rhs);
+
    void insert(const int& number);
 
    void sort(std::vector<int>& numbers_list);
@@ -26,6 +32,7 @@ class CocktailSort : public SortingAlgorithm
 
  private:
    int len;
+   int size;
    int* arr;
 
    void cocktailSort(int arr[], int len);
