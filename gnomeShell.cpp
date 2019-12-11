@@ -49,11 +49,9 @@ void GnomeShell::insert(const int& number)
   size++;
 }
 
-void GnomeShell::sort(std::vector<int>& numlist)
+void GnomeShell::sort()
 {
   gnomeShellSort();
-  for (int i = 0; i < len; ++i)
-    numlist.push_back(arr[i]);
 }
 
 void GnomeShell::print()

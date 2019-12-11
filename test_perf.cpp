@@ -28,7 +28,7 @@ int main(int argc, char** argv)
   }
 
   int new_length = atoi(argv[2]);
-  ShellSort* c = new ShellSort(new_length);
+  GnomeShell* c = new GnomeShell(new_length);
   TestDriver driver(argv[1], c);
   driver.run_tests();
   driver.print_results();

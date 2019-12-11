@@ -49,7 +49,7 @@ void TestDriver::run_tests()
   in_file.open(filename);
   //  initialize data (ms)
   total_ins = 0;
-  total_srt = 0, total_srt = 0;
+  total_srt = 0, srt_times = 0;
 
   while (in_file)
   {
@@ -58,6 +58,7 @@ void TestDriver::run_tests()
     int new_num = atoi(number.c_str());
     algorithm->insert(new_num);
     total_ins++;
+
   }
 
   srt_times += timed_sort(in_file);
@@ -89,9 +90,8 @@ void TestDriver::print_results() const
 int TestDriver::timed_sort(std::fstream& in_file)
 {
   using namespace std::chrono;
-  std::vector<int> numbers;
   auto start = high_resolution_clock::now();
-  algorithm->sort(numbers);
+  algorithm->sort();
   auto end = high_resolution_clock::now();
   auto time = duration_cast<microseconds>(end - start);
   int duration = time.count();

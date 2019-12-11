@@ -24,7 +24,7 @@ public:
 
   void insert(const int& number);
 
-  void sort(std::vector<int>& numlist);
+  void sort();
 
   void print();
 
